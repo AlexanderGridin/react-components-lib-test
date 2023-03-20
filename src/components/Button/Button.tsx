@@ -1,5 +1,15 @@
 import React from "react";
+import style from "./Button.module.css";
 
-export const Button = () => {
-	return <button type="button">Library button</button>;
+interface IButtonProps {
+	children: string;
+	onClick: () => void;
+}
+
+export const Button = ({ children, onClick }: IButtonProps) => {
+	return (
+		<button type="button" className={style.button} onClick={onClick}>
+			{children}
+		</button>
+	);
 };
