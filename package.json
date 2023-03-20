@@ -1,5 +1,8 @@
 {
-	"name": "react-components-lib-test",
+	"name": "@AlexanderGridin/react-components-lib-test",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/AlexanderGridin"
+	},
 	"version": "1.0.0",
 	"description": "Test components library",
 	"scripts": {
@@ -21,8 +24,6 @@
 	},
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"types": "dist/index.d.ts"
 }
