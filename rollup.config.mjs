@@ -9,7 +9,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default [
 	{
-		input: "src/index.ts",
+		input: "./src/index.ts",
 		external: ["react-dom"],
 		output: [
 			{
@@ -27,7 +27,15 @@ export default [
 			peerDepsExternal(),
 			resolve(),
 			commonjs(),
-			typescript({ tsconfig: "./tsconfig.json" }),
+			typescript({
+				tsconfig: "./tsconfig.json",
+				exclude: [
+					"**/__tests__",
+					"**/*.test.ts",
+					"**/*.test.tsx",
+					"**/*.config.ts",
+				],
+			}),
 			postcss({
 				modules: true,
 			}),
