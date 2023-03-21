@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Button.module.css";
 
-interface IButtonProps {
+export interface IButtonProps {
 	children: string;
 	onClick: () => void;
 }
