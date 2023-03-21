@@ -34,6 +34,7 @@ export default [
 					"**/*.test.ts",
 					"**/*.test.tsx",
 					"**/*.config.ts",
+					"**/*.stories.tsx",
 				],
 			}),
 			postcss({
