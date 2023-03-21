@@ -8,7 +8,12 @@ interface IButtonProps {
 
 export const Button = ({ children, onClick }: IButtonProps) => {
 	return (
-		<button type="button" className={style.button} onClick={onClick}>
+		<button
+			data-testid="Button"
+			type="button"
+			className={style.button}
+			onClick={onClick}
+		>
 			{children}
 		</button>
 	);
